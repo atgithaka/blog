@@ -1,0 +1,19 @@
+:root {
+    --edges: clamp(0%, 100vw, 6%);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100dvh;
+    width: 100dvw;
+}

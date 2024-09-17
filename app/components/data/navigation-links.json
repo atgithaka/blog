@@ -1,5 +1,5 @@
 [
-    { "URL": "", "name": "Landing" },
+    { "URL": "", "name": "Landing", "active": true },
     { "URL": "", "name": "News" },
     { "URL": "", "name": "Categories" }
 ]
