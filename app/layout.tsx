@@ -1,10 +1,23 @@
 import type { Metadata } from 'next';
-// import localFont from 'next/font/local';
+import localFont from 'next/font/local';
 import './globals.css';
 
 export const metadata: Metadata = {
     title: 'Blog',
 };
+
+const workSans = localFont({
+    src: [
+        {
+            path: '/fonts/work-sans-normal.ttf',
+            style: 'normal',
+        },
+        {
+            path: '/fonts/work-sans-italic.ttf',
+            style: 'italic',
+        },
+    ],
+});
 
 export default function RootLayout({
     children,
@@ -13,7 +26,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body>{children}</body>
+            <body className={workSans.className}>{children}</body>
         </html>
     );
 }
