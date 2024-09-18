@@ -1,4 +1,6 @@
 .header {
+    position: sticky;
+    top: 0px;
     height: 75px;
     width: 100%;
     display: grid;
@@ -35,6 +37,14 @@
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
+}
+
+.navigation_dropdown {
+    display: none;
+}
+
+.dropdown {
+    display: none;
 }
 
 .link {
@@ -83,6 +93,32 @@
     }
     .call_to_action {
         display: none;
+    }
+    .navigation_dropdown {
+        grid-area: 1/2/2/4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .navigation_dropdown_icon img {
+        width: 20px;
+        height: auto;
+    }
+
+    .navigation_dropdown_children {
+        position: absolute;
+        top: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-self: flex-start;
+        padding-left: var(--edges);
+        padding-top: var(--edges);
+        width: calc(60% - var(--edges) - var(--edges));
+        height: calc(100vh - 75px);
+        gap: var(--edges);
     }
 }
 
